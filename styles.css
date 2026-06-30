@@ -60,6 +60,10 @@ a:hover {
   justify-content: space-between;
 }
 
+.nav-no-brand {
+  justify-content: flex-end;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -235,6 +239,22 @@ h3 {
   margin-bottom: 24px;
 }
 
+.photo-avatar {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+}
+
+.photo-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .profile-card h2 {
   font-size: 1.6rem;
   margin-bottom: 10px;
@@ -284,9 +304,13 @@ h3 {
   gap: 18px;
 }
 
+.research-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .card {
   padding: 24px;
-  min-height: 220px;
+  min-height: 180px;
   border: 1px solid var(--line);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.72);
@@ -403,6 +427,10 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .research-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-card {
     flex-direction: column;
   }
@@ -415,6 +443,10 @@ h3 {
 
   .nav {
     padding: 14px 20px;
+  }
+
+  .nav-no-brand {
+    justify-content: space-between;
   }
 
   .nav-toggle {
@@ -445,6 +477,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .research-cards {
+    grid-template-columns: 1fr;
+  }
+
   .publication {
     grid-template-columns: 1fr;
   }
@@ -455,6 +491,13 @@ h3 {
 
   h1 {
     font-size: 4rem;
+  }
+
+  .photo-avatar {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 
